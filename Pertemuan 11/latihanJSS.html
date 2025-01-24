@@ -1,0 +1,21 @@
+<html>
+<head>
+     <title>Konversi Kurs</title>
+    <script type="text/javascript" src="../Pertemuan 11/js/skripku.js"></script>
+</head>
+<body>
+    <form id="form_valas">
+        <label>Harga : </label>
+        <input type="text" name="harga" />
+        <label>Jumlah Beli : </label>
+        <input type="text" name="jumlah" />
+        <select name="valas" onchange="konversiKurs()">
+           <option value="">-- Pilih Valas --</option>
+           <option value="14172.51">U$D</option>
+           <option value="15606.77">EUR</option>
+           <option value="11795.93">SGD</option>
+        </select>
+        <input type="text" name="total" disabled="" />
+    </form>
+</body>
+</html>
