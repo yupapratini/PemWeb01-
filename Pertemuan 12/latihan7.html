@@ -1,0 +1,49 @@
+<script>
+    //array of object
+    let p1 = {'nip':'111', 'nama':'Budi Santoso','jabatan':'Manager',
+              'status':'Menikah','agama':'Islam'};
+    let p2 = {'nip':'112', 'nama':'Siti Aminah','jabatan':'Asisten Manager',
+              'status':'Belum','agama':'Islam'};
+    let p3 = {'nip':'113', 'nama':'Alissa','jabatan':'Supervisor',
+              'status':'Menikah','agama':'Kristen Protestan'};
+    let p4 = {'nip':'114', 'nama':'I Putu Gede','jabatan':'Staff',
+              'status':'Belum','agama':'Hindu'};
+    let p5 = {'nip':'115', 'nama':'Sri Rezeki','jabatan':'Staff',
+              'status':'Menikah','agama':'Budha'};
+    //array associative
+    let pegawai = [p1,p2,p3,p4,p5];
+    //array scalar
+    const judul = ['NO','NIP','NAMA','JABATAN','STATUS','AGAMA'];
+</script>
+<h3 align="center">DAFTAR PEGAWAI</h3>
+<table align="center" border="1" widht="60%"
+    cellspacing="0" cellpadding="10">
+    <thead>
+        <tr bgcolor="skyblue" id="header">
+        </tr>
+    </thead>
+    <script>
+        let data_judul_kolom = ''
+        //looping judul kolom dari array scalar judul
+        for (let jdl of judul) {
+            data_judul_kolom += `<th>${jdl}</th>`;
+        }
+        document.getElementById("header").innerHTML = data_judul_kolom;
+    </script>
+    <tbody>
+    <script>
+    let no = 1;
+    for(let peg of pegawai){
+        let warna = ( no % 2 == 1) ? 'pink' : 'softblue' ;
+        document.write(` <tr bgcolor='${warna}'>
+            <td>${no++}</td>
+            <td>${peg.nip}</td>
+            <td>${peg.nama}</td>
+            <td>${peg.jabatan}</td>
+            <td>${peg.status}</td>
+            <td>${peg.agama}</td>
+            <tr>`);
+    }
+    </script>
+    </tbody>
+</table>
